@@ -1,0 +1,30 @@
+.user__info-edit-button {
+  flex-shrink: 0;
+  height: 18px;
+  width: 18px;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  background-color: transparent;
+  background-image: url(../../../images/edit.svg);
+  background-repeat: no-repeat;
+  background-size: 7.5px;
+  background-position: center;
+  cursor: pointer;
+  transition: opacity .6s;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 8px;
+}
+
+@media (min-width: 1280px) {
+  .user__info-edit-button {
+    height: 24px;
+    width: 24px;
+    background-size: 10px;
+    margin-left: 18px;
+  }
+}
+
+.user__info-edit-button:hover {
+  opacity: .6;
+}

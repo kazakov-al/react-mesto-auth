@@ -1,0 +1,11 @@
+.user__nickname {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+@media (min-width: 1280px) {
+  .user__nickname {
+    justify-content: flex-start;
+  }
+}

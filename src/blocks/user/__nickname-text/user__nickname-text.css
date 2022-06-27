@@ -1,0 +1,19 @@
+.user__nickname-text {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1280px) {
+  .user__nickname-text {
+    font-size: 42px;
+    line-height: 48px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

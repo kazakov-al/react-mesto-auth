@@ -1,0 +1,15 @@
+.form__field {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  padding-bottom: 13px;
+}
+
+.form__field:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 1);
+}
