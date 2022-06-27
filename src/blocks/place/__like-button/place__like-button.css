@@ -1,0 +1,27 @@
+.place__like-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: opacity .6s;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 30px;
+}
+
+.place__like-button::before {
+  content: '';
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/like.svg#like-disable);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.place__like-button:hover {
+  opacity: .6;
+}

@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 25px 22px;
+}
+
+@media (min-width: 1280px) {
+  .form {
+    padding: 34px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 37px;
+  }
+}

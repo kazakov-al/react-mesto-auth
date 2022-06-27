@@ -1,0 +1,31 @@
+.profile__place-add-button {
+  flex-shrink: 0;
+  height: 50px;
+  width: 100%;
+  max-width: 282px;
+  box-sizing: border-box;
+  border: 2px solid #FFFFFF;
+  border-radius: 2px;
+  background-color: transparent;
+  background-image: url(../../../images/add.svg);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  cursor: pointer;
+  transition: opacity .6s;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 36px;
+}
+
+@media (min-width: 1280px) {
+  .profile__place-add-button {
+    max-width: 150px;
+    background-size: 22px;
+    margin-top: 0;
+  }
+}
+
+.profile__place-add-button:hover {
+  opacity: .6;
+}

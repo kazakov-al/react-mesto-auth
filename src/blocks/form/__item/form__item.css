@@ -1,0 +1,16 @@
+.form__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+
+.form__item:nth-of-type(1) {
+  margin-top: 75px;
+}
+
+@media (min-width: 1280px) {
+  .form__item:nth-of-type(1) {
+    margin-top: 60px;
+  }
+}

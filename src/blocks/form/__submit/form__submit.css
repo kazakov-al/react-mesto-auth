@@ -1,0 +1,24 @@
+.form__submit {
+  font-size: 14px;
+  line-height: 17px;
+  background-color: var(--background-color-default);
+  color: var(--color-default);
+  border: none;
+  cursor: pointer;
+  transition: background-color .6s;
+  border-radius: 2px;
+  padding: 14px 28px;
+  margin-top: 45px;
+}
+
+@media (min-width: 1280px) {
+  .form__submit {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 48px;
+  }
+}
+
+.form__submit:not(.form__submit_type_disabled):hover {
+  background-color: rgba(0, 0, 0, .8);
+}

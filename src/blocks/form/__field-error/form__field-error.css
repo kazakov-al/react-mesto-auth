@@ -1,0 +1,9 @@
+.form__field-error {
+  display: none;
+  position: absolute;
+  transform: translateY(100%);
+  bottom: -5px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+}
