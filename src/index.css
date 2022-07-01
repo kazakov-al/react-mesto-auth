@@ -5,6 +5,7 @@
 @import './blocks/root/root.css';
 @import './blocks/page/page.css';
 @import './blocks/content/content.css';
+@import './blocks/link/link.css';
 @import './blocks/button/button.css';
 @import './blocks/button/_color/button_color_white.css';
 
