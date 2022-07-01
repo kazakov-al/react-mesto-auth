@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 function Register(props) {
-  const {} = props
+  // const {} = props;
 
   function handleSubmit(e) {
     e.preventDefault();

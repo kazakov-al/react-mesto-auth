@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import Index from '../routes/Index';
 import Register from '../routes/Register';
 import Login from '../routes/Login';
@@ -115,6 +115,7 @@ function App() {
         <Header />
 
         <main className="content">
+          <Link to="/sign-up"></Link>
           <Switch>
             <ProtectedRoute
               exact
