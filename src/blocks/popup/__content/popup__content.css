@@ -1,4 +1,4 @@
-.form {
+.popup__content {
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 1280px) {
-  .form {
+  .popup__content {
     padding: 34px;
     padding-left: 36px;
     padding-right: 36px;

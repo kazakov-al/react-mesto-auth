@@ -44,10 +44,16 @@
 @import './blocks/popup/__container/_width/popup__container_width_auto.css';
 @import './blocks/popup/__close-button/popup__close-button.css';
 @import './blocks/popup/__figure/popup__figure.css';
+@import './blocks/popup/__content/popup__content.css';
+@import './blocks/popup/__content/_place/popup__content_place_infotooltip.css';
 @import './blocks/popup/__image/popup__image.css';
 @import './blocks/popup/__caption/popup__caption.css';
+@import './blocks/popup/__status-icon/popup__status-icon.css';
+@import './blocks/popup/__status-icon/_type/popup__status-icon_type_success.css';
+@import './blocks/popup/__status-icon/_type/popup__status-icon_type_defeat.css';
+@import './blocks/popup/__text/popup__text.css';
+@import './blocks/popup/__text/_place/popup__text_place_infotooltip.css';
 
-@import './blocks/form/form.css';
 @import './blocks/form/__title/form__title.css';
 @import './blocks/form/__item/form__item.css';
 @import './blocks/form/__field/form__field.css';

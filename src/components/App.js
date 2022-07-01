@@ -6,6 +6,7 @@ import ImagePopup from './ImagePopup';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
+import InfoTooltip from './InfoTooltip';
 import api from "../utils/api";
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
@@ -144,6 +145,13 @@ function App() {
           card={selectedCard}
           onClose={closeAllPopups}
         />
+
+        <InfoTooltip
+          isOpen={true}
+          onClose={closeAllPopups}
+          isRequestCompleted={true}
+        />
+
       </div>
     </CurrentUserContext.Provider>
   );
