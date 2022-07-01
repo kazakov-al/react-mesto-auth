@@ -46,6 +46,7 @@
 @import './blocks/popup/__figure/popup__figure.css';
 @import './blocks/popup/__content/popup__content.css';
 @import './blocks/popup/__content/_place/popup__content_place_infotooltip.css';
+@import './blocks/popup/__content/_place/popup__content_place_form.css';
 @import './blocks/popup/__image/popup__image.css';
 @import './blocks/popup/__caption/popup__caption.css';
 @import './blocks/popup/__status-icon/popup__status-icon.css';

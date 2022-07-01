@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Index from '../routes/Index';
+import Register from '../routes/Register';
+import Login from '../routes/Login';
+import ProtectedRoute from './ProtectedRoute';
 import Header from './Header';
-import Main from './Main';
 import Footer from './Footer';
 import ImagePopup from './ImagePopup';
 import EditProfilePopup from './EditProfilePopup';
@@ -17,6 +21,7 @@ function App() {
   const [ isAddPlacePopupOpen, setAddPlacePopupOpen ] = useState(false);
   const [ cards, setCards ] = useState([]);
   const [ selectedCard, setSelectedCard ] = useState({});
+  const [ loggedIn, setloggedIn ] = useState(true);
 
   useEffect(() => {
     Promise.all([
@@ -103,15 +108,31 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
         <Header />
-        <Main
-          cards={cards}
-          onEditAvatar={handleEditAvatarClick}
-          onEditProfile={handleEditProfileClick}
-          onAddPlace={handleAddPlaceClick}
-          onCardClick={handleCardClick}
-          onCardLike={handleLikeClick}
-          onCardDelete={handleDeleteClick}
-        />
+
+        <main className="content">
+          <Switch>
+            <Route path="/sign-up">
+              <Register />
+            </Route>
+            <Route path="/sign-in">
+              <Login />
+            </Route>
+            <ProtectedRoute
+
+              path="/"
+              loggedIn={loggedIn}
+              component={Index}
+              cards={cards}
+              onEditAvatar={handleEditAvatarClick}
+              onEditProfile={handleEditProfileClick}
+              onAddPlace={handleAddPlaceClick}
+              onCardClick={handleCardClick}
+              onCardLike={handleLikeClick}
+              onCardDelete={handleDeleteClick}
+            />
+          </Switch>
+        </main>
+
         <Footer />
 
         <EditProfilePopup
@@ -147,7 +168,7 @@ function App() {
         />
 
         <InfoTooltip
-          isOpen={true}
+          isOpen={false}
           onClose={closeAllPopups}
           isRequestCompleted={true}
         />
