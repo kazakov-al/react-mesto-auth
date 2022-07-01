@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Index from '../routes/Index';
 import Register from '../routes/Register';
 import Login from '../routes/Login';
+import PageNotFound from '../routes/PageNotFound';
 import ProtectedRoute from './ProtectedRoute';
 import Header from './Header';
 import Footer from './Footer';
@@ -21,7 +22,7 @@ function App() {
   const [ isAddPlacePopupOpen, setAddPlacePopupOpen ] = useState(false);
   const [ cards, setCards ] = useState([]);
   const [ selectedCard, setSelectedCard ] = useState({});
-  const [ loggedIn, setloggedIn ] = useState(false);
+  const [ loggedIn, setloggedIn ] = useState(true);
 
   useEffect(() => {
     Promise.all([
@@ -97,6 +98,10 @@ function App() {
       .catch(console.error);
   }
 
+  function handleLoginSubmit() {
+
+  }
+
   function closeAllPopups() {
     setEditProfilePopupOpen(false);
     setAddPlacePopupOpen(false);
@@ -111,14 +116,8 @@ function App() {
 
         <main className="content">
           <Switch>
-            <Route path="/sign-up">
-              <Register />
-            </Route>
-            <Route path="/sign-in">
-              <Login />
-            </Route>
             <ProtectedRoute
-
+              exact
               path="/"
               loggedIn={loggedIn}
               component={Index}
@@ -130,6 +129,17 @@ function App() {
               onCardLike={handleLikeClick}
               onCardDelete={handleDeleteClick}
             />
+            <Route path="/sign-up">
+              <Register />
+            </Route>
+            <Route path="/sign-in">
+              <Login
+                onLogin={handleLoginSubmit}
+              />
+            </Route>
+            <Route path="*">
+              <PageNotFound />
+            </Route>
           </Switch>
         </main>
 
@@ -168,7 +178,7 @@ function App() {
         />
 
         <InfoTooltip
-          isOpen={true}
+          isOpen={false}
           onClose={closeAllPopups}
           isRequestCompleted={false}
         />

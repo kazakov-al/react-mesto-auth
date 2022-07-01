@@ -1,0 +1,12 @@
+.form__submit_place_authorization {
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: auto;
+}
+
+@media (min-width: 1280px) {
+  .form__submit_place_authorization {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
