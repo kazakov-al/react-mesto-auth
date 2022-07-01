@@ -21,7 +21,7 @@ function App() {
   const [ isAddPlacePopupOpen, setAddPlacePopupOpen ] = useState(false);
   const [ cards, setCards ] = useState([]);
   const [ selectedCard, setSelectedCard ] = useState({});
-  const [ loggedIn, setloggedIn ] = useState(true);
+  const [ loggedIn, setloggedIn ] = useState(false);
 
   useEffect(() => {
     Promise.all([
@@ -168,9 +168,9 @@ function App() {
         />
 
         <InfoTooltip
-          isOpen={false}
+          isOpen={true}
           onClose={closeAllPopups}
-          isRequestCompleted={true}
+          isRequestCompleted={false}
         />
 
       </div>

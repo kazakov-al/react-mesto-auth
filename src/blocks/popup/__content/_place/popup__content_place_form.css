@@ -3,7 +3,7 @@
 }
 
 @media (min-width: 1280px) {
-  .popup__content {
+  .popup__content_place_form {
     padding-top: 34px;
     padding-left: 36px;
     padding-right: 36px;
