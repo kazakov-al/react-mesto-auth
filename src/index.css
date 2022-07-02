@@ -1,4 +1,4 @@
-@import 'vendor/fonts.css';
+@import './vendor/fonts.css';
 
 @import './variables/variables.css';
 
@@ -6,11 +6,22 @@
 @import './blocks/page/page.css';
 @import './blocks/content/content.css';
 @import './blocks/link/link.css';
+
 @import './blocks/button/button.css';
 @import './blocks/button/_color/button_color_white.css';
 
 @import './blocks/header/header.css';
+@import './blocks/header/__content/header__content.css';
 @import './blocks/header/__logo/header__logo.css';
+@import './blocks/header/__logo-img/header__logo-img.css';
+@import './blocks/header/__link/header__link.css';
+@import './blocks/header/__menu-button/header__menu-button.css';
+@import './blocks/header/__menu-button/_close/header__menu-button_close.css';
+
+@import './blocks/header-menu/header-menu.css';
+@import './blocks/header-menu/_show/header-menu_show.css';
+@import './blocks/header-menu/__user-email/header-menu__user-email.css';
+@import './blocks/header-menu/__logout-button/header-menu__logout-button.css';
 
 @import './blocks/profile/profile.css';
 @import './blocks/profile/__place-add-button/profile__place-add-button.css';

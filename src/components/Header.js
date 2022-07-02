@@ -20,38 +20,36 @@ function Header(props) {
     </Switch>
   );
 
+  const headerMenu = (
+    <div className={`header-menu ${isMenuOpen ? 'header-menu_show' : ''}`}>
+      <p className="header-menu__user-email">{userEmail}</p>
+      <button className="header-menu__logout-button" onClick={handleSignOutClick}>Выйти</button>
+    </div>
+  );
+
   function openMenu() {
     setMenuOpen(!isMenuOpen);
-    console.log('12')
   }
 
   function handleSignOutClick() {
     setMenuOpen(false);
-    console.log(onSignOut)
     onSignOut();
   }
 
-  const userLogout = (
-    <div className={`header__info ${isMenuOpen ? 'header__info_show' : ''}`}>
-      <p className="header__user-email">{userEmail}</p>
-      <button className="header__logout-btn" onClick={handleSignOutClick}>Выйти</button>
-    </div>
-  );
-
   return (
     <header className="header">
-      { loggedIn ? userLogout : headerLink }
+      { loggedIn && headerMenu }
 
-      <div className="">
-        <Link to="/">
+      <div className="header__content">
+        <Link className="header__logo" to="/">
           <img
-            className="header__logo"
+            className="header__logo-img"
             src={logo}
             alt="Логотип проекта «Mesto»"
           />
         </Link>
-
-        { loggedIn && <button className="header__menu-button" onClick={openMenu}>123</button> }
+        { !loggedIn && headerLink }
+        { loggedIn && <button className={`header__menu-button ${isMenuOpen ? 'header__menu-button_close' : ''}`} onClick={openMenu} /> }
       </div>
     </header>
   );

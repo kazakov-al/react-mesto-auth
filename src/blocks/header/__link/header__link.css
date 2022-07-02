@@ -1,0 +1,12 @@
+.header__link {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media (min-width: 1280px) {
+  .header__link {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+

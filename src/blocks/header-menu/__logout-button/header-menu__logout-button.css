@@ -1,0 +1,17 @@
+.header-menu__logout-button {
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #A9A9A9;
+  padding: 0;
+  border: none;
+  margin-top: 18px;
+}
+
+@media (min-width: 1280px) {
+  .header-menu__logout-button {
+    margin-top: initial;
+    margin-left: 24px;
+  }
+}
