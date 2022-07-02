@@ -15,14 +15,14 @@ function PopupWithForm(props, { buttonText="Сохранить" }) {
         >
         </button>
 
-        <form className="form" name={`${name}-form`} action="" method="POST" noValidate onSubmit={onSubmit}>
+        <form className="form popup__content popup__content_place_form" name={`${name}-form`} action="" method="POST" noValidate onSubmit={onSubmit}>
           <h2 className="form__title">
             { title }
           </h2>
 
           { children }
 
-          <button className="form__submit">{ buttonText }</button>
+          <button className="button form__submit">{ buttonText }</button>
         </form>
       </div>
     </section>

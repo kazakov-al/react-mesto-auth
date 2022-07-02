@@ -1,0 +1,8 @@
+.form__field_color_white {
+  color: #CCCCCC;
+  border-bottom: 2px solid rgba(204, 204, 204, 1);
+}
+
+.form__field_color_white:focus {
+  border-color: rgba(204, 204, 204, .2);
+}

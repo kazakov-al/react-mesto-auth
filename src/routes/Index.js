@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
-import Card from './Card';
+import Card from '../components/Card';
 
-function Main(props) {
+function Index(props) {
   const { cards, onEditAvatar, onEditProfile, onAddPlace, onCardClick, onCardLike, onCardDelete } = props;
   const currentUser = useContext(CurrentUserContext);
 
   return(
-    <main className="content">
+    <>
       <section className="profile">
         <figure className="user">
           <div className="user__avatar">
@@ -47,7 +47,6 @@ function Main(props) {
         >
         </button>
       </section>
-
       <section className="places">
         <ul className="places__list">
           {
@@ -59,12 +58,12 @@ function Main(props) {
                 onCardDelete={onCardDelete}
                 key={card._id}
               />
-            )
-          )}
+              )
+            )}
         </ul>
       </section>
-    </main>
+    </>
   );
 }
 
-export default Main;
+export default Index;

@@ -1,0 +1,15 @@
+.form__action {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateY(100%);
+  margin: 0;
+}
+
+@media (min-width: 1280px) {
+  .form__action {
+    bottom: -15px;
+  }
+}
