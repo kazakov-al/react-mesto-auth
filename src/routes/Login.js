@@ -1,6 +1,29 @@
-function Login(onLogin) {
+import { useState } from "react";
+
+function Login(props) {
+  const { onLogin } = props;
+
+  const [ email, setEmail ] = useState('');
+  const [ password, setPassword ] = useState('');
+
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (email && password) {
+      onLogin(email, password);
+    }
+  }
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+
+    if (name === 'email') {
+      setEmail(value);
+    }
+
+    if (name === 'password') {
+      setPassword(value);
+    }
   }
 
   return (
@@ -11,6 +34,8 @@ function Login(onLogin) {
           className="form__field form__field_color_white"
           name="email"
           type="email"
+          value={email}
+          onChange={handleChange}
           placeholder="Email"
           minLength="2"
           maxLength="40"
@@ -23,6 +48,8 @@ function Login(onLogin) {
           className="form__field form__field_color_white"
           name="password"
           type="password"
+          value={password}
+          onChange={handleChange}
           placeholder="Пароль"
           minLength="2"
           maxLength="200"

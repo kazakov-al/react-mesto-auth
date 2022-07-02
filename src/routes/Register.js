@@ -1,10 +1,30 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Register(props) {
-  // const {} = props;
+  const { onRegister } = props;
+
+  const [ email, setEmail ] = useState('');
+  const [ password, setPassword ] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (email && password) {
+      onRegister(email, password);
+    }
+  }
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+
+    if (name === 'email') {
+      setEmail(value);
+    }
+
+    if (name === 'password') {
+      setPassword(value);
+    }
   }
 
   return (
@@ -15,6 +35,8 @@ function Register(props) {
           className="form__field form__field_color_white"
           name="email"
           type="email"
+          value={email}
+          onChange={handleChange}
           placeholder="Email"
           minLength="2"
           maxLength="40"
@@ -27,6 +49,8 @@ function Register(props) {
           className="form__field form__field_color_white"
           name="password"
           type="password"
+          value={password}
+          onChange={handleChange}
           placeholder="Пароль"
           minLength="2"
           maxLength="200"
